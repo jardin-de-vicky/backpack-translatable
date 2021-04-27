@@ -10,7 +10,6 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "backpack/base": "*",
         "backpack/crud": "*",
         "backpack/langfilemanager": "*"
     },
