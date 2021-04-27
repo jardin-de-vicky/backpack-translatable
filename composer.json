@@ -12,7 +12,7 @@
     "require": {
         "backpack/base": "*",
         "backpack/crud": "*",
-        "backpack/langfilemanager": "^1.0"
+        "backpack/langfilemanager": "*"
     },
     "autoload": {
         "psr-4": {
