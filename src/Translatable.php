@@ -54,15 +54,7 @@ class Translatable
      */
     public function localeId($localeAbbr = null): int
     {
-        $localeAbbr = $localeAbbr??app()->getLocale();
-
-        $language = \Backpack\LangFileManager\app\Models\Language::where('abbr', $localeAbbr)->first();
-
-        if (is_null($language)) {
-            throw new LogicException('Locale ['.$localeAbbr.'] doesn\'t exists');
-        }
-
-        return $language->id;
+        return 2;
     }
 
     /**
@@ -83,17 +75,6 @@ class Translatable
      */
     function activeLocales(bool $withAbbr = false): array
     {
-        $languages = \Backpack\LangFileManager\app\Models\Language::where('active', 1)->get();
-
-        if (!$withAbbr) {
-            return $languages->pluck('id')->toArray();
-        }
-
-        $withAbbrLanguages = [];
-        foreach ($languages as $lang) {
-            $withAbbrLanguages[$lang->id] = $lang->abbr;
-        }
-
-        return $withAbbrLanguages;
+        return [2 => 'fr'];
     }
 }

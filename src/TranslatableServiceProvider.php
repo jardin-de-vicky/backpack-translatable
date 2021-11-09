@@ -14,7 +14,6 @@ class TranslatableServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishConfig();
         $this->loadConsoleCommands();
     }
 
@@ -41,17 +40,4 @@ class TranslatableServiceProvider extends ServiceProvider
             ]);
         }
     }
-
-    /**
-     * Publish configs
-     */
-    public function publishConfig()
-    {
-        // Override configs
-        $this->publishes([
-            __DIR__ . '/config/backpack/translatable.php' => config_path('backpack/translatable.php'),
-        ],'backpack-translatable-config');
-
-    }
-
 }
