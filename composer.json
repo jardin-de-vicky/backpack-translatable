@@ -10,8 +10,6 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "backpack/crud": "*",
-        "backpack/langfilemanager": "*"
     },
     "autoload": {
         "psr-4": {
